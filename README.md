@@ -1,4 +1,4 @@
 # zabbix-otrs
-Integration Zabbix + OTRS with API of both systems
+Integração Zabbix + OTR.
 
-***Under development***
+Abertura automática de chamado no OTRS a partir de um evento gerado no Zabbix.
