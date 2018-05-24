@@ -1,0 +1,42 @@
+---
+Debugger:
+  DebugThreshold: debug
+  TestMode: '0'
+Description: Connector OTRS by Janssen dos Reis Lima janssenreislima@gmail.com
+FrameworkVersion: 5.0.13
+Provider:
+  Operation:
+    SessionCreate:
+      Description: Cria uma sessão
+      MappingInbound: {}
+      MappingOutbound: {}
+      Type: Session::SessionCreate
+    TicketCreate:
+      Description: Cria um ticket
+      MappingInbound: {}
+      MappingOutbound: {}
+      Type: Ticket::TicketCreate
+    TicketGet:
+      Description: Obtem dados de tickets
+      MappingInbound: {}
+      MappingOutbound: {}
+      Type: Ticket::TicketGet
+    TicketSearch:
+      Description: Procura por tickets
+      MappingInbound: {}
+      MappingOutbound: {}
+      Type: Ticket::TicketSearch
+    TicketUpdate:
+      Description: Atualiza um ticket
+      MappingInbound: {}
+      MappingOutbound: {}
+      Type: Ticket::TicketUpdate
+  Transport:
+    Config:
+      MaxLength: '100000000'
+      NameSpace: http://127.0.0.1/TicketConnector/
+    Type: HTTP::SOAP
+RemoteSystem: ''
+Requester:
+  Transport:
+    Type: ''
