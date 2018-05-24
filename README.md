@@ -1,4 +1,4 @@
 # zabbix-otrs
-Integração Zabbix + OTR.
+Integração Zabbix + OTRS.
 
 Abertura automática de chamado no OTRS a partir de um evento gerado no Zabbix.
