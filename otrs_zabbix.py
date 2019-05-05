@@ -13,8 +13,8 @@ from otrs.ticket.objects import Ticket, Article, DynamicField, Attachment
 import sys, os
 
 
-server_uri = 'http://127.0.0.1'
-webservice_name = 'IntegraZabbix'
+server_uri = 'http://127.0.0.1' # IP do servidor web do OTRS
+webservice_name = 'IntegraZabbix' # Nome do webservice importado no OTRS
 client = GenericInterfaceClient(server_uri, tc=GenericTicketConnectorSOAP(webservice_name))
 
 client.tc.SessionCreate(user_login='alerta', password='123456')

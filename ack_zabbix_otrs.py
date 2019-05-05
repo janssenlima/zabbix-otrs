@@ -1,6 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+###############################################################
+# Autor: Janssen dos Reis Lima - janssenreislima@gmail.com    #
+# Objetivo: Fazer o ack no evento automaticamente             #
+# Versao: 1.0                                                 #
+###############################################################
 from zabbix_api import ZabbixAPI
 import sys, re
- 
+
+# Parametros de acesso da interface web do Zabbix 
 server = "http://localhost/zabbix"
 username = "Admin"              
 password = "zabbix"     
