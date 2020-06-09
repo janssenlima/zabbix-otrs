@@ -16,6 +16,8 @@ password = "zabbix"
 zapi = ZabbixAPI(server = server)
 zapi.login(username, password)
 
-zapi.event.acknowledge({"eventids": sys.argv[1], "message": "Ticket " + str(sys.argv[2]) + " criado no OTRS."})
+
+zapi.event.acknowledge({"eventids": sys.argv[1], "message": "Ticket " + str(sys.argv[2]) + " criado no OTRS.", "action": 4})
+zapi.event.acknowledge({"eventids": sys.argv[1], "action": 2})
 
 
