@@ -3,7 +3,7 @@
 ###############################################################
 # Autor: Janssen dos Reis Lima - janssenreislima@gmail.com    #
 # Objetivo: Fazer o ack no evento automaticamente             #
-# Versao: 1.0                                                 #
+# Versao: 1.1                                                 #
 ###############################################################
 from zabbix_api import ZabbixAPI
 import sys, re
@@ -16,6 +16,4 @@ password = "zabbix"
 zapi = ZabbixAPI(server = server)
 zapi.login(username, password)
 
-zapi.event.acknowledge({"eventids": sys.argv[1], "message": "Ticket " + str(sys.argv[2]) + " criado no OTRS."})
-
-
+zapi.event.acknowledge({"eventids": sys.argv[1], "action": 6 , "message": "Ticket " + str(sys.argv[2]) + " criado no OTRS."})
